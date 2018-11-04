@@ -1,0 +1,14 @@
+<!-- <div app-root class="inventory-app">
+  <div>
+    <ul>
+      <li *ngFor="let product of products">{{ product.name }}</li>
+    </ul>
+  </div>
+</div> -->
+
+<div class="inventory-app">
+  <products-list
+    [productList]="products"
+    (onProductSelected)="productWasSelected($event)">
+  </products-list>
+</div>
